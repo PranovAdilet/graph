@@ -16,7 +16,7 @@ const Graph = () => {
     console.log(data)
     return (
         <div className="graph">
-            <h1>GitHub Contributions</h1>
+            <h1>Contributions graph</h1>
             <div>
 
             </div>
