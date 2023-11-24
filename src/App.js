@@ -1,6 +1,6 @@
 import React from 'react';
-import './App.css';
-import Graph from "./pages/Graph";
+import './App.scss';
+import GraphPage from "./pages/GraphPage";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
     return (
         <div>
             <QueryClientProvider client={queryClient}>
-                <Graph/>
+                <GraphPage/>
             </QueryClientProvider>
 
         </div>

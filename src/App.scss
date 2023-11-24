@@ -1,0 +1,155 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background: #e5e5e5;
+}
+
+$cell-height: 14px;
+$cell-width: 14px;
+$cell-margin: 2px;
+$cell-weekdays-width: 30px;
+
+
+.timeline{
+    &-body{
+        display: flex;
+    }
+    &-weekdays{
+        display: inline-flex;
+        flex-direction: column;
+        width: $cell-weekdays-width;
+        &-weekday{
+            font-size: 12px;
+            height: 14px;
+            margin: $cell-margin;
+            border: 1px solid transparent;
+            text-align: center;
+            vertical-align: middle;
+            color: #a2a1a1;
+        }
+    }
+    &-months{
+        display: flex;
+        padding-left: $cell-weekdays-width;
+        column-gap: 63px;
+        &-month{
+            width: $cell-width;
+            margin: $cell-margin;
+            border: 1px solid transparent;
+            font-size: 11px;
+            color: #a2a1a1;
+        }
+    }
+    &-cells{
+        display: inline-flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: #{(14 + 3) * 8}px;
+        &-cell{
+            height: $cell-height;
+            width: $cell-width;
+
+            margin: $cell-margin;
+            background-color: #ebedf0;
+            position: relative;
+            &:hover{
+                outline: 1.5px solid black;
+                outline-offset: -1.5px;
+
+            }
+        }
+
+    }
+}
+
+
+.highlighted{
+    outline: 1.5px solid black;
+    outline-offset: -1.5px;
+}
+.timeline-highlighted {
+    border: 1px solid black;
+    background-color: black;
+    color: #dfdfdf;
+    padding: 7px 10px 14px;
+    position: absolute;
+    top: -70px;
+    left: -93px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    max-height: 55px;
+    min-width: 200px;
+    &::before{
+        position: absolute;
+        content: "";
+        bottom: -15px;
+        left: 92px;
+        border: 7px solid transparent; border-top: 10px solid black;
+    }
+
+    .timeline-highlighted-contributions {
+        font-size: 16px;
+        margin-bottom: 5px;
+
+    }
+
+    .timeline-highlighted-block {
+        display: flex;
+        column-gap: 7px
+
+    }
+
+    .timeline-highlighted-info {
+        font-size: 11px;
+        color: #747474;
+    }
+}
+
+
+.graph{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: white;
+
+    max-width: 1200px;
+    min-height: 400px;
+    &-bottom{
+        display: flex;
+        column-gap: 15px;
+        align-items: center;
+        margin: 20px 0 0 30px;
+        &-block{
+            display: flex;
+        }
+        &-text{
+            color: #747474;
+            font-size: 11px;
+        }
+
+    }
+}
+
+.graphPage {
+    font-family: Arial, sans-serif;
+    &-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+}
+
+
+

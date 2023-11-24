@@ -1,7 +1,10 @@
 import axios from "axios";
 import {useQuery} from "@tanstack/react-query";
+import Graph from "../components/Graph";
 
-const Graph = () => {
+const GraphPage = () => {
+
+
     const { isLoading, error, data } = useQuery({
         queryKey: ["graphData"],
         queryFn: async () => {
@@ -13,15 +16,13 @@ const Graph = () => {
 
     if (error) return 'An error has occurred: ' + error.message
 
-    console.log(data)
     return (
-        <div className="graph">
-            <h1>Contributions graph</h1>
-            <div>
-
+        <div className="graphPage">
+            <div className="graphPage-content">
+                <Graph data={data}/>
             </div>
         </div>
     );
 };
 
-export default Graph;
+export default GraphPage;
