@@ -3,9 +3,6 @@ import Timeline from "./TimeLine";
 
 
 
-
-
-
 const Graph = ({ data }) => {
 
     const dataArray = Object.entries(data).map(([date, contributions]) => ({

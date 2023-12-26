@@ -12,7 +12,6 @@ function App() {
             <QueryClientProvider client={queryClient}>
                 <GraphPage/>
             </QueryClientProvider>
-
         </div>
     )
 }

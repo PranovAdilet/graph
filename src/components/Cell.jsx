@@ -38,11 +38,11 @@ function Cell({ currentMonth, dayOfWeek, contributions, ordinalDay, onClick, yea
     const contributionsFunction = () => {
         if (contributions > 0 && contributions < 10){
             return "#acd5f2"
-        }else if (contributions > 10 && contributions < 19){
+        }else if (contributions > 9 && contributions < 19){
             return  "#7fa8c9"
         }else if (contributions > 19 && contributions < 30){
             return "#527ba0"
-        }else if (contributions > 30){
+        }else if (contributions > 29){
             return  "#254e77"
         }
         return "#ededed"
